@@ -1,0 +1,3 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=679
+
+This includes two files, one is a syntax file for the menu file of the fluxbox (and also blackbox) window manager, and the other is an indent file for the same menu file. The indent file depends on the GenericIndent function in the genindent.vim plugin (vimscript #678).
