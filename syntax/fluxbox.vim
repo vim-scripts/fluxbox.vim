@@ -1,7 +1,7 @@
 " File Name: fluxbox.vim
 " Maintainer: Moshe Kaminsky <kaminsky@math.huji.ac.il>
 " Original Date: May 23, 2002
-" Last Update: June 15, 2003
+" Last Update: June 16, 2003
 " Description: fluxbox menu syntax file
 
 " Quit when a syntax file was already loaded
@@ -26,7 +26,7 @@ highlight link fluxboxCommand Statement
 highlight link fluxboxPreProc PreProc
 highlight link fluxboxComment Comment
 highlight link fluxboxParam Constant
-set foldmethod=syntax
+setlocal foldmethod=syntax
 syntax sync fromstart
 
 let b:current_syntax = 'fluxbox'
