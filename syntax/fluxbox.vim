@@ -1,7 +1,7 @@
 " File Name: fluxbox.vim
 " Maintainer: Moshe Kaminsky <kaminsky@math.huji.ac.il>
 " Original Date: May 23, 2002
-" Last Update: September 03, 2004
+" Last Update: October 17, 2004
 " Description: fluxbox menu syntax file
 
 " Quit when a syntax file was already loaded
@@ -10,13 +10,13 @@ if exists("b:current_syntax")
 endif
 
 syntax keyword fluxboxMenu submenu end begin workspaces config stylesmenu separator nop contained
-syntax keyword fluxboxAction exec stylesdir exit restart reconfig style contained
+syntax keyword fluxboxAction exec stylesdir exit restart reconfig style commanddialog contained
 syntax keyword fluxboxPreProc include
 syntax region fluxboxType matchgroup=fbSqBrackets start=/\[/ end=/\]/ contains=fluxboxAction,fluxboxMenu,fluxboxPreProc nextgroup=fluxboxHeader skipwhite oneline display
-syntax region fluxboxHeader matchgroup=fbRdBrackets start=/(/ end=/)/ contained nextgroup=fluxboxCommand skipwhite oneline display
+syntax region fluxboxHeader matchgroup=fbRdBrackets start=/(/ end=/)/ contained nextgroup=fluxboxCommand,fluxboxIcon skipwhite oneline display
 syntax region fluxboxCommand matchgroup=fbClBrackets start=/{/ end=/}/ contained oneline display contains=fluxboxParam nextgroup=fluxboxIcon skipwhite
 syntax region fluxboxIcon matchgroup=fbAgBrackets start=/</ end=/>/ contained  oneline display
-syntax region fluxboxFold fold start=/\[submenu\]/ start=/\[begin\]/ end=/\[end\]/ contains=TOP keepend extend transparent
+syntax region fluxboxFold fold start=/^\s*\[submenu\]/ start=/^\s*\[begin\]/ end=/^\s*\[end\]/ contains=TOP keepend extend transparent
 syntax match fluxboxComment /#.*$/
 syntax match fluxboxParam / [^}]*/ contained display
 
