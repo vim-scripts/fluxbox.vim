@@ -1,7 +1,7 @@
 " File Name: fluxbox.vim
 " Maintainer: Moshe Kaminsky <kaminsky@math.huji.ac.il>
 " Original Date: May 23, 2002
-" Last Update: September 29, 2003
+" Last Update: January 30, 2004
 " Description: fluxbox menu syntax file
 
 " Quit when a syntax file was already loaded
@@ -9,7 +9,7 @@ if exists("b:current_syntax")
   finish
 endif
 
-syntax keyword fluxboxMenu submenu end begin workspaces config stylesmenu contained
+syntax keyword fluxboxMenu submenu end begin workspaces config stylesmenu separator contained
 syntax keyword fluxboxAction exec stylesdir exit restart reconfig nop style contained
 syntax keyword fluxboxPreProc include
 syntax region fluxboxType matchgroup=fbSqBrackets start=/\[/ end=/\]/ contains=fluxboxAction,fluxboxMenu,fluxboxPreProc nextgroup=fluxboxHeader skipwhite oneline
